@@ -4,16 +4,17 @@ import { Student } from '../_models/student';
 @Injectable({
   providedIn: 'root'
 })
+
 export class StudentService {
 
   student:Student;
 
   studentArray:Student[] =[
-    new Student(0,"Omar",26),
-    new Student(1,"koko",25),
-    new Student(2,"bobo",24),
-    new Student(3,"lolo",23),
-    new Student(4,"soso",22)
+    new Student(1,"Omar",26),
+    new Student(2,"koko",25),
+    new Student(3,"bobo",24),
+    new Student(4,"lolo",23),
+    new Student(5,"soso",22)
   ];
   getAllStudents(): Student[]{
     return this.studentArray;
@@ -32,7 +33,7 @@ export class StudentService {
   }
 
   updateStudent(){
-    
+
   }
   constructor() { }
 }

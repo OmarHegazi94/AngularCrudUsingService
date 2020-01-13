@@ -4,6 +4,7 @@ import { Department } from '../_models/department';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DepartmentService {
 
   department:Department;
