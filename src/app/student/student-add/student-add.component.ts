@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/_models/student';
+import { StudentService } from 'src/app/_services/student.service';
 
 @Component({
   selector: 'app-student-add',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentAddComponent implements OnInit {
 
-  constructor() { }
+  student:Student=new Student(1,"",10); //must create new object reserve a place for the new object created in the html
+
+  constructor(private studentService:StudentService) { }
 
   ngOnInit() {
+  }
+
+  addStd(){
+    this.studentService.addStudent(this.student);
   }
 
 }

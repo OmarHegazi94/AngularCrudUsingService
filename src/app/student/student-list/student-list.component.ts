@@ -17,4 +17,8 @@ export class StudentListComponent implements OnInit {
     this.students = this.studentService.getAllStudents();
   }
 
+  deleteOneStudent(studentId:number){
+    this.studentService.deleteStudent(studentId);
+  }
+
 }

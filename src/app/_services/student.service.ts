@@ -7,7 +7,7 @@ import { Student } from '../_models/student';
 
 export class StudentService {
 
-  student:Student;
+  // student:Student;
 
   studentArray:Student[] =[
     new Student(1,"Omar",26),
@@ -20,11 +20,11 @@ export class StudentService {
     return this.studentArray;
   }
 
-  addStudent(){
-    this.studentArray.push(new Student(this.student.Id,this.student.Name,this.student.Age));
+  addStudent(student:Student){
+    this.studentArray.push(student);
   }
 
-  deleteStudent(id){
+  deleteStudent(id:number){
     for(let i=0; i<this.studentArray.length; i++){
       if(id === this.studentArray[i].Id){
         this.studentArray.splice(i, 1);

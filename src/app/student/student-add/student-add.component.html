@@ -1,1 +1,7 @@
-<p>student-add works!</p>
+<form class="form-inline mb-1">
+    <input class="form-control mr-1" placeholder="id" type="text" [(ngModel)]="student.Id" name="id">
+    <input class="form-control mr-1" placeholder="name" type="text" [(ngModel)]="student.Name" name="name">
+    <input class="form-control mr-1" placeholder="age" type="text" [(ngModel)]="student.Age" name="age">
+
+    <button class="btn btn-primary" (click)="addStd()">Add</button>
+</form>
